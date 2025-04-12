@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AR Menu</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene
+      embedded
+      arjs="sourceType: webcam; debugUIEnabled: false;"
+      vr-mode-ui="enabled: false"
+    >
+      <a-marker type="pattern" url="your-marker.patt">
+        <a-plane position="0 0 0" rotation="-90 0 0" width="1.5" height="1" color="#FFFFFF">
+          <a-text value="🍔 Burger - $5.99\n🍕 Pizza - $8.99" color="black" align="center" position="0 0 0.1" wrap-count="20"></a-text>
+        </a-plane>
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
